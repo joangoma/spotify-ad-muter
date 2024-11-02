@@ -67,9 +67,8 @@ The script will run silently in the background. Press Ctrl+C to stop it.
 
 ### Automatic Startup (Optional)
 
-You can set up the script to run automatically when you log in using either systemd (recommended) or desktop autostart.
+You can set up the script to run automatically when you log in spotify.
 
-#### Method 1: Systemd Service (Recommended)
 
 1. Create the systemd user directory:
 ```bash
