@@ -26,7 +26,7 @@ For other distributions, use your package manager to install equivalent packages
 
 1. Clone or download this repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/joangoma/spotify-ad-muter.git
 cd spotify-ad-muter
 ```
 
@@ -123,49 +123,6 @@ systemctl --user enable spotify-muter.service
 systemctl --user start spotify-muter.service
 ```
 
-#### Method 2: Desktop Autostart Entry
-
-1. Create the autostart directory:
-```bash
-mkdir -p ~/.config/autostart
-```
-
-2. Create the desktop entry file:
-```bash
-nano ~/.config/autostart/spotify-muter.desktop
-```
-
-3. Add the following content (replace YOUR_USERNAME with your actual username):
-
-If using system Python:
-```ini
-[Desktop Entry]
-Type=Application
-Name=Spotify Ad Muter
-Comment=Automatically mute Spotify advertisements
-Exec=/usr/bin/python3 /home/YOUR_USERNAME/.local/bin/spotify_ad_muter.py
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-```
-
-If using virtual environment:
-```ini
-[Desktop Entry]
-Type=Application
-Name=Spotify Ad Muter
-Comment=Automatically mute Spotify advertisements
-Exec=/home/YOUR_USERNAME/.virtualenvs/spotify-muter/bin/python3 /home/YOUR_USERNAME/.local/bin/spotify_ad_muter.py
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-```
-
-4. Make it executable:
-```bash
-chmod +x ~/.config/autostart/spotify-muter.desktop
-```
-
 ## Managing the Service
 
 Check status:
@@ -203,7 +160,3 @@ systemctl --user disable spotify-muter.service
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
